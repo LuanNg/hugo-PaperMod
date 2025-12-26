@@ -3,7 +3,7 @@
 baseURL: "https://xn--nngdn-6qa6j.vn/"
 title: LuanNg 4
 copyright: "© [LuanNg Contributors](https://github.com/adityatelange/hugo-LuanNg/graphs/contributors)"
-theme: [hugo-LuanNg]
+theme: [hugo-PaperMod]
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
