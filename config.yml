@@ -32,17 +32,24 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
+        - name: Home
+          url: /
+          weight: 1
+        - name: Profile
+          url: profile/
+          weight: 2
+        - name: Blog
+          url: posts/
+          weight: 3
+        - name: Projects
+          url: projects/
+          weight: 4
         - name: Tags
           url: tags/
-          weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-LuanNg/wiki/
+          weight: 5
+        - name: Contact
+          url: contact/
+          weight: 6
 
   fr:
     languageName: ":fr:"

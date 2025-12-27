@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="hero-home">
+  <div class="hero-content">
+    <h1>Nguyen Thanh Luan</h1>
+    <h2 class="hero-sub">Professional Software Engineer & Tech Blogger</h2>
+    <p class="hero-desc">Welcome to my personal tech blog! Here I share insights, tutorials, and projects in software development, remote work, and technology trends. Dive in to explore my journey and expertise.</p>
+    <div class="hero-actions">
+      <a href="/profile/" class="hero-btn">View Profile</a>
+      <a href="/posts/" class="hero-btn hero-btn-alt">Read Blog</a>
+    </div>
+  </div>
+</div>
+<div class="recent-posts-section">
+  <h2>Recent Blog Posts</h2>
+  <div class="recent-posts-list">
+    {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+      <div class="recent-post-card">
+        <a href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary | plainify | truncate 120 }}</p>
+          <span class="recent-post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

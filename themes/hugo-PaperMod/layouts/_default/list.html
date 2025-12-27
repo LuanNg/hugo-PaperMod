@@ -52,12 +52,18 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
-{{- range $index, $page := $paginator.Pages }}
-
-{{- $class := "post-entry" }}
-
-{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
+<div class="blog-list-grid">
+  {{- range $index, $page := $paginator.Pages }}
+    <div class="blog-card">
+      <a href="{{ $page.RelPermalink }}">
+        <h3>{{ $page.Title }}</h3>
+        <p>{{ $page.Summary | plainify | truncate 120 }}</p>
+        <span class="blog-card-date">{{ $page.Date.Format "Jan 2, 2006" }}</span>
+      </a>
+    </div>
+  {{- end }}
+</div>
+{{/* Old code for special 1st post and post-entry is replaced by grid above */}}
 {{- $class = "first-entry" }}
 {{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
