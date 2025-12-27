@@ -1,27 +1,27 @@
 {{ define "main" }}
 <div class="hero-home">
   <div class="hero-content">
-    <h1>Nguyen Thanh Luan</h1>
-    <h2 class="hero-sub">Professional Software Engineer & Tech Blogger</h2>
-    <p class="hero-desc">Welcome to my personal tech blog! Here I share insights, tutorials, and projects in software development, remote work, and technology trends. Dive in to explore my journey and expertise.</p>
+    <h1>Build a Professional Tech Blog with Hugo CMS (2026)</h1>
+    <h2 class="hero-sub">By Nguyen Thanh Luan</h2>
+    <p class="hero-desc">This site is a step-by-step guide to creating a modern, professional tech blog using Hugo CMS. Follow the instructions below to launch your own site focused on Python, AI, Microservices, .NET, Kafka, and Redis.</p>
     <div class="hero-actions">
-      <a href="/profile/" class="hero-btn">View Profile</a>
-      <a href="/posts/" class="hero-btn hero-btn-alt">Read Blog</a>
+      <a href="/profile/" class="hero-btn">About Me</a>
+      <a href="/contact/" class="hero-btn hero-btn-alt">Contact</a>
     </div>
   </div>
 </div>
 <div class="recent-posts-section">
-  <h2>Recent Blog Posts</h2>
-  <div class="recent-posts-list">
-    {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
-      <div class="recent-post-card">
-        <a href="{{ .RelPermalink }}">
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Summary | plainify | truncate 120 }}</p>
-          <span class="recent-post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        </a>
-      </div>
-    {{ end }}
-  </div>
+  <h2>How to Build Your Hugo Blog</h2>
+  <ol class="hugo-guide-list">
+    <li><b>Install Hugo CMS</b>: Download and install the latest version of Hugo from <a href="https://gohugo.io/getting-started/installing/" target="_blank">gohugo.io</a>.</li>
+    <li><b>Initialize Your Site</b>: Run <code>hugo new site myblog</code> to create a new project.</li>
+    <li><b>Choose a Theme</b>: Add a professional theme (like PaperMod) for a modern look.</li>
+    <li><b>Configure Your Site</b>: Edit <code>config.yml</code> for title, menu, and language.</li>
+    <li><b>Create Content</b>: Add posts about Python, AI, Microservices, .NET, Kafka, Redis, and more.</li>
+    <li><b>Write a Complete Blog Post</b>: <a href="/posts/how-to-write-hugo-post/">See the guide to writing a professional post on Hugo CMS</a>.</li>
+    <li><b>Customize Pages</b>: Set up Profile, Projects, Tags, and Contact pages for a personal touch.</li>
+    <li><b>Deploy</b>: Publish your site to Netlify, Vercel, or your own server.</li>
+  </ol>
+  <p class="hugo-guide-note">Explore the <a href="/posts/">Blog</a> for detailed tutorials and real-world examples.</p>
 </div>
 {{ end }}

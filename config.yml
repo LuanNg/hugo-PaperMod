@@ -47,9 +47,12 @@ languages:
         - name: Tags
           url: tags/
           weight: 5
+        - name: Search
+          url: /search/
+          weight: 6
         - name: Contact
           url: contact/
-          weight: 6
+          weight: 7
 
   fr:
     languageName: ":fr:"
